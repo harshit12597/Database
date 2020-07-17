@@ -2,10 +2,10 @@
 					================
 
 1) Which field of the Customers table is the primary key?
-----> Cnum
+----> Cnum is Primary key in the table. 
 
 2) What is the 4th column of the Customers table?
-----> Ratings
+----> Ratings is Fourth Column.
 
 3) What is another word for row? For column?
 ----> Alias for
@@ -13,4 +13,4 @@
       Coloumn:- attribute, method
 
 4) Why isn’t it possible to see the first five rows of a table?
-----> Order by and offset
+----> Because at the time insert we declare that which entity's inserted in table. 
