@@ -1,0 +1,132 @@
+					SQL Exercise-1
+Create database DEPARTMENT;
+
+use DEPARTMENT;
+===============================================================================
+1.
+Create table SEMP
+(
+  EMPNO CHAR(4),
+  EMPNAME CHAR(20),
+  BASIC FLOAT(9,2),
+  DEPTNO CHAR(2),
+  DEPTHEAD CHAR(4)
+);
+===============================================================================
+2.
+Create table SDEPT
+(
+  DEPTNO CHAR(2),
+  DEPTNAME CHAR(15)
+);
+===============================================================================
+3.
+Insert into SDEPT
+values('10','Development');
+
+Insert into SDEPT
+values('20','Training');
+===============================================================================
+4.
+Insert into SEMP
+values('0001','SUNIL',6000,'10',null);
+
+Insert into SEMP
+values('0002','HIREN',8000,'20',null);
+
+Insert into SEMP
+values('0003','ALI',4000,'10','0001');
+
+Insert into SEMP
+values('0004','GEORGE',6000,null,'0002');
+===============================================================================
+5.
+create table S
+(
+S$ char(4), 
+Sname varchar(20),
+Status int(4), 
+City varchar(20)
+);
+
+insert S values('S1', 'rrr', 10, 'London');
+insert S values('S2', 'sss', 20, 'Barcelona');
+insert S values('S3', 'ttt', 30, 'Athens');
+insert S values('S4', 'uuu', 40, 'Bombay');
+insert S values('S4', 'uuu', 40, 'Paris');
+insert S values('S4', 'uuu', 40, 'Budapest');
+
+
+create table P
+(
+P$ char(4),
+Pname varchar(20),
+Color varchar(20),
+Weight int(4), 
+City varchar(20)
+); 
+
+insert P values('P1', 'www', 'Black', 10, 'Paris');
+insert P values('P2', 'xxx', 'Brown', 25, 'London');
+insert P values('P3', 'yyy', 'Black', 45, 'Bombay');
+insert P values('P4', 'zzz', 'Red', 40, 'LA');
+
+create table J
+(
+J$ char(4), 
+Jname varchar(20), 
+City varchar(20)
+);
+
+insert J values('J1', 'kkk', 'Budapest');
+insert J values('J2', 'jjj', 'Athens');
+insert J values('J3', 'lll', 'LA');
+insert J values('J4', 'mmm', 'Barcelona'); 
+
+create table SPJ
+(
+S$ char(4), 
+P$ char(4), 
+J$ char(4), 
+Qty int(4)
+);
+
+insert SPJ values('S1', 'P1', 'J1', 10);
+insert SPJ values('S2', 'P2', 'J2', 30);
+insert SPJ values('S3', 'P3', 'J3', 20);
+insert SPJ values('S4', 'P4', 'J4', 40);
+===============================================================================
+5.
+Select * from S;
+===============================================================================
+6.
+Select SNAME from S;
+===============================================================================
+7.
+Select PNAME, COLOR from P where CITY= "London" ;
+===============================================================================
+8.
+Select * from P where CITY= "London" ;
+===============================================================================
+9.
+Select * from P where CITY= "Paris"  or "Athens";
+===============================================================================
+10.
+select * from j where city= 'Athens';
+===============================================================================
+11.
+select Pname,weight from p where weight between 12 and 14;
+===============================================================================
+12.
+select * from s where status>=20;
+===============================================================================
+13.
+Select * from s where CITY!= "London" ;
+===============================================================================
+14.
+Select CITY from s;
+===============================================================================
+15.
+a) select weight*1000 from p;
+b)select weight/1000 from p; 
+===============================================================================
