@@ -2,8 +2,15 @@
 					================
 
 1) Does ANSI recognize the data type DATE?
------> Yes
+-----> Yes, Following example will shows the valid input and output format of data-type.
+       ANSIdate    yyyy-mm-dd    1995-04-03	
 
 
 2) Which subdivision of SQL is used to insert values in tables?
------> DML subdivision
+-----> We can insert the data by two ways in the table
+       1. Insert directly in a table eg: INSERT INTO employee (id, name, dept, age, salary, location)
+       	  VALUES(105,'Laxman','Mechanic',34,34500);
+       2. Insert data into a table through select statement(Mostly to insert row from temporary table to main table)
+          Eg: INSERT INTO employee (id, name, dept, age, salary, location)
+	      SELECT emp_id, emp_name, dept, age, salary, loaction
+	      FROM temp_employee;
