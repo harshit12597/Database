@@ -1,4 +1,6 @@
 				SQL Assignment-1
+				================
+				
 create database shop;
 
 use shop;
