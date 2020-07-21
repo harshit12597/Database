@@ -1,0 +1,17 @@
+					SQL Assignment-8
+					================
+===========================================================================
+1.
+SELECT onum, snum, amt, (amt*12)/100 commision FROM orders;
+===========================================================================
+2.
+SELECT CITY,MAX(RATING) AS RATING FROM CUSTOMERS 
+GROUP BY CITY;
+===========================================================================
+3.
+SELECT RATING,CNAME,CNUM FROM CUSTOMERS
+ORDER BY RATING DESC;
+===========================================================================
+4.
+SELECT COUNT(ODATE) FROM ORDERS GROUP BY ODATE ORDER BY ODATE DESC;
+===========================================================================
