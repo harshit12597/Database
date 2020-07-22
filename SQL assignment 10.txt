@@ -1,0 +1,11 @@
+						SQL Assignment-10
+						=================
+==========================================================================
+1.
+SELECT N1.SNAME,N2.SNAME,N1.CITY FROM SALESPEOPLE N1,SALESPEOPLE N2
+WHERE N1.CITY=N2.CITY AND N1.SNAME < N2.SNAME;
+==========================================================================
+2.
+SELECT CNAME,CITY FROM CUSTOMERS
+WHERE RATING =(SELECT RATING FROM CUSTOMERS WHERE CNAME = 'Hoffman');
+==========================================================================
