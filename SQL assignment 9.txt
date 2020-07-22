@@ -1,0 +1,24 @@
+					SQL Assignment-9
+					================
+==========================================================================
+1.
+SELECT ONUM,CNAME FROM ORDERS,CUSTOMERS	
+	WHERE CUSTOMERS.CNUM = ORDERS.CNUM;
+==========================================================================
+2.
+SELECT SNAME,CNAME,ONUM FROM ORDERS,CUSTOMERS,SALESPEOPLE
+	WHERE ORDERS.SNUM = CUSTOMERS.SNUM 
+	AND   ORDERS.SNUM = SALESPEOPLE.SNUM;
+==========================================================================
+3.
+SELECT CNAME,SNAME,COMM*100 "RATE OF COMM." FROM CUSTOMERS,SALESPEOPLE
+	WHERE CUSTOMERS.SNUM = SALESPEOPLE.SNUM
+	AND COMM > 0.12;
+==========================================================================
+4.
+SELECT AMT,COMM FROM CUSTOMERS,ORDERS,SALESPEOPLE
+	WHERE CUSTOMERS.SNUM = ORDERS.SNUM
+	AND ORDERS.SNUM = SALESPEOPLE.SNUM
+	AND RATING > 100
+	ORDER BY RATING > 100;
+==========================================================================
