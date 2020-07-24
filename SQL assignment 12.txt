@@ -1,0 +1,19 @@
+						SQL Assignment-12
+						=================
+==================================================================================================================
+1.
+select Cname, rating from customers
+where rating >= (select rating from customers natural join salespeople where Sname = 'Serres') ;
+==================================================================================================================
+2.
+select Sname from salespeople 
+where city NOT IN (select city from customers); 
+==================================================================================================================
+3.
+select Onum, Amt from orders 
+where amt > any (select amt from orders where cnum IN ( select Cnum from customers where city = 'London'));
+==================================================================================================================
+4.
+select Onum, Amt from orders 
+where amt >  (select min(amt) from orders where cnum IN ( select Cnum from customers where city = 'London'));
+==================================================================================================================
