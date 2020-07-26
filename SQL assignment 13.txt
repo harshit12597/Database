@@ -1,0 +1,28 @@
+				SQL Assignment-13
+				=================	
+================================================================
+1.
+SELECT CNAME,CITY,'HIGH RATING' RATING FROM CUSTOMERS
+	WHERE RATING > 200
+	UNION
+SELECT CNAME,CITY,'LOW RATING' RATING FROM CUSTOMERS
+	WHERE RATING <=200;
+================================================================
+2.
+SELECT SNAME,SNUM,CNAME FROM SALESPEOPLE
+	JOIN CUSTOMERS USING(SNUM)
+	WHERE SNUM IN
+    (SELECT SNUM FROM CUSTOMERS
+     GROUP BY SNUM
+     HAVING COUNT(SNUM)>1)
+	ORDER BY SNAME,CNAME;
+================================================================
+3.
+SELECT SNUM FROM SALESPEOPLE
+	WHERE CITY ='SAN JOSE'
+	UNION
+SELECT DISTINCT SNUM FROM ORDERS
+	WHERE SNUM IN
+	(SELECT SNUM FROM ORDERS
+	WHERE ODATE LIKE '1990-10-03');
+================================================================

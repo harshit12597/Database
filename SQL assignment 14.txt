@@ -1,0 +1,22 @@
+				SQL Assignment-14
+				=================
+=====================================================================	
+1.
+INSERT INTO SALESPEOPLE(CITY,SNAME,COMM,SNUM)
+	VALUES('San Jose','Blanco',NULL,1100);
+=====================================================================
+2.
+DELETE FROM ORDERS
+	WHERE CNUM = (SELECT CNUM FROM CUSTOMERS
+			WHERE CNAME='CLEMENS');
+=====================================================================
+3.
+UPDATE CUSTOMERS SET RATING = RATING + 100
+	WHERE CITY = 'ROME';
+=====================================================================
+4.
+UPDATE CUSTOMERS SET SNUM = 
+	(SELECT SNUM FROM SALESPEOPLE WHERE SNAME = 'Motika')
+	WHERE SNUM =
+	(SELECT SNUM FROM SALESPEOPLE WHERE SNAME = 'Serres');
+=====================================================================
