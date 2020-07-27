@@ -1,0 +1,15 @@
+		SQL Assignment-16
+		=================	
+=================================================
+1.
+CREATE INDEX order_date on ORDERS(odate);
+=================================================
+2.
+CREATE UNIQUE INDEX O_NUM ON ORDERS(ONUM);
+=================================================
+3.
+CREATE INDEX I_DATE ON ORDERS(ODATE);
+=================================================
+4.
+ALTER TABLE CUSTOMERS ADD PRIMARY KEY(RATING);
+=================================================
