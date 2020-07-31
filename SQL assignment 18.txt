@@ -1,0 +1,19 @@
+				SQL Assignment-18
+			        =================
+====================================================================================
+1.
+CREATE TABLE Cityorders AS
+	SELECT ONUM,AMT,ORDERS.SNUM,CUSTOMERS.CNUM,CITY FROM ORDERS,CUSTOMERS
+		WHERE CUSTOMERS.CNUM = ORDERS.CNUM;
+
+	ALTER TABLE cityorders ADD CONSTRAINT onum_fk
+	FOREIGN key(onum) REFERENCES orders(onum);
+====================================================================================
+2.
+ALTER TABLE Orders ADD Prev INT(4);
+
+  ALTER TABLE Orders ADD CONSTRAINT prev_fk
+  FOREIGN KEY(Prev) REFERENCES Orders(Onum);
+
+  ALTER TABLE Orders ADD FOREIGN KEY(Cnum) REFERENCES Customers(Cnum);
+==================================================================================== 

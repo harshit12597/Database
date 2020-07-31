@@ -1,0 +1,34 @@
+				SQL Assingment-17
+				=================
+=========================================================================================
+1.
+CREATE TABLE ORDERS
+(
+	Onum int(4),
+	Amt float(7,2),
+	Cnum int(4),
+	Odate date NOT NULL,
+	Snum int(4),
+	CONSTRAINT PK_1 PRIMARY KEY(Onum,Cnum,Snum)
+);
+=========================================================================================
+2.
+CREATE TABLE SALESPEOPLE
+(
+	Snum int(4) PRIMARY KEY,
+	Sname Varchar(10) CHECK(Sname = upper(sname) BETWEEN 'A' AND 'M'),
+	City varchar(4),
+	Comm float(3,2) DEFAULT 0.10
+);
+=========================================================================================
+3.
+CREATE TABLE ORDERS1
+(
+	Onum int(4) NOT NULL,
+	Amt float(7,2),
+	Cnum int(4) NOT NULL,
+	Odate date,
+	Snum int(4) NOT NULL,
+	CONSTRAINT on_cn_sn CHECK(Onum > Cnum AND Cnum > Snum)
+);
+=========================================================================================

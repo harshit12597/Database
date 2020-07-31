@@ -1,0 +1,32 @@
+ 			SQL Assignment-20
+			=================
+==========================================================================
+1. 
+#1.Create View Dailyorders
+as Select Distinct cnum, snum, onum, odate from Orders; 
+Ans) updateable.
+
+#2.Create View Custotals
+as Select cname, Sum (amt) Sum_Amt from Orders, Customers
+where Orders.cnum=Customers.cnum
+Group by cname; 
+Ans)Not updatable.
+
+#3.Create view Thirdorders
+as Select * from Dailyorders where
+odate=’1990-10-03’; 
+Ans)Not updatable.
+
+#4.Create view Nullcities
+as Select snum, sname, city
+from Salespeople
+where city is NULL
+OR sname BETWEEN ‘A’ and ‘MZ’; 
+Ans)Not updatable.
+==========================================================================
+2.
+--->yes updatable
+    create view Commissions
+    as
+    select snum,comm from salespeople where comm between 0.10 and 0.20;
+==========================================================================
